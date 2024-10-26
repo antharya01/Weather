@@ -1,0 +1,207 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin:30px;
+  font-family: 'Open Sans', sans-serif;
+  background: #222;
+  background-image: url("https://getwallpapers.com/wallpaper/full/6/7/a/1369483-best-weather-wallpaper-2560x1600-for-android-50.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  font-size: 120%;
+}
+.page{
+  display: grid;
+  gap:70px;
+
+}
+.cont{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+}
+.card {
+  background: rgba(255, 255, 255, 0.2);
+  color: rgb(0, 0, 0);
+  padding: 2em;
+  border-radius: 30px;
+  width: 100%;
+  max-width: 420px;
+  left:50px;
+  display: grid;
+   margin-top:7vw;
+ backdrop-filter: blur(10px) saturate(180%);
+ 
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(255, 255, 255);
+}
+
+button {
+  margin: 0.5em;
+  border-radius: 50%;
+  border: none; 
+  height: 44px;
+  width: 44px;
+  outline: none;
+  background: #ffffff70;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  box-shadow: 2px 2px grey;
+}
+
+input.search-bar {
+  border: none;
+  outline: none;
+  padding: 0.4em 1em;
+  border-radius: 24px;
+  background: #ffffff89;
+  color: rgb(255, 255, 255);
+  font-family: inherit;
+  font-size: 105%;
+  width: calc(100% - 100px);
+  box-shadow: 2px 2px grey;
+}
+.img .icon{
+  width:20vh;
+}
+button:hover {
+  background: #ffffff6b;
+}
+
+h1.temp {
+  margin: 0;
+  margin-bottom: 0.4em;
+}
+
+.flex {
+  display:flex;
+  align-items: center;
+  width:30vj;
+  float:right;
+  gap:10vh;
+}
+.flex .img{
+  width:10vh;
+}
+.description {
+  text-transform: capitalize;
+  margin-left: 8px;
+}
+
+.weather.loading {
+  visibility: hidden;
+  max-height: 20px;
+  position: relative;
+}
+
+.weather.loading:after {
+  visibility: visible;
+  content: "Loading...";
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 20px;
+}       
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right, rgba(3, 221, 255, 0.516), rgba(52, 20, 194, 0.56));
+  padding:5px;
+   width:99vw;
+   z-index: 10;
+}
+
+.nav {
+  color: #fff;
+  font-size:2rem;
+  margin-left:5vw;
+  font-family: initial;
+}
+.mhumidity{
+  display:inline-flex;
+  align-items: center;
+  gap:0.5vw;
+}
+.mwind{
+  display: inline-flex;
+  align-items: center;
+  gap:0.5vw;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap:6rem;
+  margin-right:10vw;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: monospace;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  transition: 0.3s;
+}
+.hamburger .bar.open:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger .bar.open:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger .bar.open:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    margin-top: 100px;
+    left: 0;
+    right: 0;
+    background-color: #333;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+  }
+  .card{
+    margin-top:30vw;
+  }
+
+  .nav-links.open {
+    display: flex;
+    gap:1vh;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links li {
+    padding: 1rem 0;
+  }
+}
